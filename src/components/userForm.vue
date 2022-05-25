@@ -8,10 +8,10 @@
           <Name />
 
           <v-text-field
-            type="number"
-            v-model="pass"
+            v-model="form.pass"
             label="Constraseña"
             :rules="passRules"
+            required
           ></v-text-field>
 
           <v-select
@@ -32,6 +32,7 @@
           >
             Enviar
           </v-btn>
+
         </v-form>
       </v-card-text>
     </v-card>
@@ -41,10 +42,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Name from "./nameForm.vue";
+import SendButton from './sendButton.vue'
 
 export default defineComponent({
   components: {
     Name,
+    SendButton
   },
 
   data: () => ({
