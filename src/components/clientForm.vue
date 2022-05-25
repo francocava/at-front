@@ -7,19 +7,13 @@
         <v-form ref="form" v-model="valid" lazy-validation>
 
           <Name/>
-
+        
           <DNI/>
 
           <Telephone/>
+
+          <SendButton :valid="valid"/>
       
-          <v-btn
-            :disabled="!valid"
-            color="success"
-            class="mr-4"
-            @click="validate"
-          >
-            Enviar
-          </v-btn>
         </v-form>
       </v-card-text>
     </v-card>
@@ -31,12 +25,14 @@ import { defineComponent } from "vue";
 import Name from './nameForm.vue'
 import DNI from './dniForm.vue'
 import Telephone from './telephoneForm.vue'
+import SendButton from './sendButton.vue'
 
 export default defineComponent ({
   components: {
     Name,
     DNI,
-    Telephone
+    Telephone,
+    SendButton
   },
 
   data: () => ({

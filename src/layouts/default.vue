@@ -63,7 +63,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"; // preguntar si hace falta
-import Prueba from '../components/userForm.vue';
+import Prueba from '../components/clientForm.vue';
 
 
 export default defineComponent({
@@ -96,6 +96,10 @@ export default defineComponent({
         {
           title: "Saldos",
           to: "/saldos",
+        },
+        {
+          title: "Acompañamientos",
+          to: "/acompañamientos",
         },
       ],
     };
