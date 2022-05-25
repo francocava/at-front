@@ -10,12 +10,7 @@
 
           <DNI/>
 
-          <v-text-field
-            type="number"
-            v-model="form.telefono"
-            label="Teléfono"
-          ></v-text-field>
-
+          <Telephone/>
       
           <v-btn
             :disabled="!valid"
@@ -35,11 +30,13 @@
 import { defineComponent } from "vue";
 import Name from './nameForm.vue'
 import DNI from './dniForm.vue'
+import Telephone from './telephoneForm.vue'
 
 export default defineComponent ({
   components: {
     Name,
-    DNI
+    DNI,
+    Telephone
   },
 
   data: () => ({
@@ -49,20 +46,11 @@ export default defineComponent ({
       color: "black",
     },
     valid: true,
-    obras: [],
     form: {
       nombre: "",
-      contacto: "",
-      apellido: "",
       dni: "",
       telefono: "",
-      obra_id: null,
-      nro_afiliado: "",
     },
-    apellidoRules: [
-      (v) => !!v || "Falta el apellido del cliente",
-      (v) => (v && v.length <= 25) || "Apellido muy largo",
-    ],
   }),
 });
 </script>

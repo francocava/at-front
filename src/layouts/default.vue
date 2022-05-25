@@ -63,7 +63,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"; // preguntar si hace falta
-import Prueba from '../components/form.vue';
+import Prueba from '../components/clientForm.vue';
 
 
 export default defineComponent({
@@ -77,6 +77,10 @@ export default defineComponent({
     return {
       drawer: false,
       items: [
+        {
+          title: "Calendario",
+          to: "/calendario",
+        },
         {
           title: "Clientes",
           to: "/clientes",
