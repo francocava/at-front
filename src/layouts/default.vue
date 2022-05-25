@@ -63,7 +63,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"; // preguntar si hace falta
-import Prueba from '../components/clientForm.vue';
+import Prueba from '../components/companionForm.vue';
 
 
 export default defineComponent({

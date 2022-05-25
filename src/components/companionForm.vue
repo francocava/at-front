@@ -11,6 +11,8 @@
           <DNI/>
 
           <Telephone/>
+
+          <Rate/>
       
           <v-btn
             :disabled="!valid"
@@ -31,12 +33,14 @@ import { defineComponent } from "vue";
 import Name from './nameForm.vue'
 import DNI from './dniForm.vue'
 import Telephone from './telephoneForm.vue'
+import Rate from './rateForm.vue'
 
 export default defineComponent ({
   components: {
     Name,
     DNI,
-    Telephone
+    Telephone,
+    Rate
   },
 
   data: () => ({

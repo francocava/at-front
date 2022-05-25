@@ -3,6 +3,7 @@
     type="number"
     v-model="telephone"
     label="Teléfono"
+    :rules="telephoneRules"
   ></v-text-field>
 </template>
 
@@ -10,7 +11,7 @@
 export default {
   data: () => ({
     telephone: "",
-    telephoneRules: [(v) => !!v || "Falta el DNI del cliente"],
+    telephoneRules: [(v) => !!v || "Falta el teléfono del cliente"],
   }),
 };
 </script>
