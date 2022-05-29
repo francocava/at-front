@@ -1,18 +1,15 @@
 <template>
-  <Layout />
+  <DefaultLayout />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-
+import { defineComponent } from "vue";
 // Components
-import Layout from '../layouts/default.vue';
-
+import DefaultLayout from "../layouts/default.vue";
 export default defineComponent({
-  name: 'HomeView',
-
+  name: "HomeView",
   components: {
-    Layout,
+    DefaultLayout,
   },
 });
 </script>
